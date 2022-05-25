@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>sucess blog _ accueil</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?h=594386d1e0f84ef009d8b44d9a63f64f">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="assets/Article-Clean.css">
+    <link rel="stylesheet" href="assests/styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+</head>
+<style>
+    .container {
+        width: 90%;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    
+    .container-nav,
+    .container-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    header {
+        background: #f8f8f8;
+        text-align: center;
+        padding: 2em 0;
+        margin-bottom: 3em;
+    }
+    
+    footer {
+        background: #184188;
+        color: white;
+        text-align: center;
+        padding: .5em 0;
+        bottom: 0;
+    }
+    
+    #moncompte-footer {
+        position: absolute;
+        bottom: 0;
+        height: 100px;
+    }
+    
+    .fa-heart {
+        color: red;
+    }
+    
+    footer a {
+        text-decoration: none;
+        color: red;
+    }
+    
+    strong {
+        font-weight: 700;
+    }
+    
+    nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    nav li {
+        margin: .5em 0;
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: #707070;
+        font-weight: 700;
+        margin: .25em 0;
+    }
+    
+    nav a:hover,
+    nav a:focus {
+        color: #1792d2;
+    }
+    
+    .current-page {
+        border-bottom: 1px solid #707070;
+    }
+    
+    .current-page:hover {
+        color: #707070;
+    }
+    
+    .article-featured {
+        border-bottom: #707070 1px solid;
+        padding-bottom: 2em;
+        margin-bottom: 2em;
+    }
+    
+    .article-recent {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2em;
+    }
+    
+    .article-recent-main {
+        order: 2;
+    }
+    
+    .article-recent-secondary {
+        order: 1;
+    }
+    
+    .sidebar-widget {
+        border: 10px solid #efefef;
+        margin-bottom: 2em;
+        padding: 1em;
+    }
+    
+    .widget-title {
+        font-size: 1rem;
+        font-family: sans-serif;
+        font-weight: 700;
+    }
+    
+    .widget-recent-post-title {
+        font-size: 1rem;
+    }
+    
+    .widget-recent-post {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid #707070;
+        margin-bottom: 1em;
+    }
+    
+    .widget-recent-post:last-child {
+        border: 0;
+        margin: 0;
+    }
+    
+    .widget-image {
+        order: -1;
+        margin-bottom: .5em;
+    }
+    
+    @media (min-width: 675px) {
+        .container-nav,
+        .container-flex {
+            flex-direction: row;
+        }
+        .container-nav {
+            align-items: center;
+        }
+        main {
+            width: 70%;
+        }
+        aside {
+            width: 25%;
+            min-width: 200px;
+            margin-left: 1em;
+        }
+        nav ul {
+            flex-direction: row;
+        }
+        nav li {
+            margin-left: 2em;
+        }
+        .article-recent {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .article-recent-main {
+            width: 68%;
+        }
+        .article-recent-secondary {
+            width: 30%;
+        }
+        .article-title {
+            order: 99;
+        }
+        .article-image {
+            width: 100%;
+            min-height: 200px;
+            object-fit: cover;
+        }
+        .article-featured {
+            display: flex;
+            flex-direction: column;
+        }
+        .article-image {
+            order: -2;
+        }
+        .article-info {
+            order: -1;
+        }
+        .article-title {
+            order: 0;
+        }
+    }
+    
+    .inscri {
+        margin-top: 30px;
+        text-align: center;
+    }
+    
+    .form1 {
+        background-color: #143774;
+    }
+</style>
+
+<body id="page-top">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="index.html">sucess blog</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">sucess blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html"> accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">mo compte</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead" style="background-image:url('assets/img/home-bg.jpg?h=ed6236475a1226b743bf65e6f1bebb34');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto">
+                    <div class="site-heading">
+                        <h1>accueil</h1><span class="subheading"></span></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container container-flex">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto">
+                    <p>publier une éxperience </p>
+                    <form id="contactForm" action="mailto:amandixit033@gmail.com" name="sentMessage" novalidate="novalidate">
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls"><label>titre</label><input class="form-control" type="text" id="name" required="" placeholder="titre"><small class="form-text text-danger help-block"></small></div>
+                            <div id="success"></div>
+                            <div class="form-group floating-label-form-group controls"><label>votre texte </label><input class="form-control" type="text" id="name" required="" placeholder="texte"><small class="form-text text-danger help-block"></small></div>
+                            <div id="success"></div>
+                            <div class="form-group"><button class="btn btn-primary" id="sendMessageButton" type="submit">publier </button></div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+
+            <article class="article-recent">
+                <div class="article-recent-main">
+                    <h2 class="article-title">emilie</h2>
+                    <p class="article-body">La reine du divertissement n'a vraiment pas connu des débuts faciles. Elle se fait virer de son premier emploi à la télé, jugée « inapte pour la télévision ». Aujourd'hui, elle est l'une des femmes les plus riches de l'industrie du
+                        divertissement et est devenue millionnaire à seulement 32 ans.</p>
+                    <label for="name">commentaire</label>
+
+                    <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10">
+
+                </div>
+
+                <div class="article-recent-secondary">
+
+                </div>
+                <button onclick="changeColor">like <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true"></div> </button>
+
+            </article>
+            <article class="article-recent">
+                <div class="article-recent-main">
+                    <h2 class="article-title">alaric</h2>
+                    <p class="article-body">La reine du divertissement n'a vraiment pas connu des débuts faciles. Elle se fait virer de son premier emploi à la télé, jugée « inapte pour la télévision ». Aujourd'hui, elle est l'une des femmes les plus riches de l'industrie du
+                        divertissement et est devenue millionnaire à seulement 32 ans.</p>
+                    <label for="name">commentaire</label>
+
+                    <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10">
+                </div>
+
+                <div class="article-recent-secondary">
+
+                </div>
+                <button>like <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true"></div> </button>
+
+            </article>
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v13.0" nonce="htQtCpL6"></script>
+
+            <!-- <footer>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10 col-lg-8 mx-auto">
+
+                            </div>
+                        </div>
+                    </div>
+                </footer> -->
+            <!--Modals For Blogs -->
+            <div class="d-lg-none scroll-to-top position-fixed rounded"><a class="d-block js-scroll-trigger text-center text-white rounded" href="#page-top"><i
+            class="fa fa-chevron-up"></i></a></div>
+            <div class="modal text-center" role="dialog" tabindex="-1" id="portfolio-modal-1">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                        <div class="modal-body">
+                            <div class="article-clean">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+                                            <div class="intro">
+                                            </div>
+                                            <div class="text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer pb-5">
+                            <a class="btn btn-dark btn-md mx-auto rounded-pill portfolio-modal-dismiss" role="button" target="_blank"><i class="fa fa-quote-left" aria-hidden="true"></i> JavaScript is the world's most misunderstood programming language.      
+                &nbsp;<i class="fa fa-quote-right" aria-hidden="true"></i>    
+                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--2nd Blog Modal-->
+            <div class="modal text-center" role="dialog" tabindex="-1" id="portfolio-modal-2">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                        <div class="modal-body">
+                            <div class="article-clean">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+                                            <div class="intro">
+                                            </div>
+                                            <div class="text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer pb-5">
+                            <a class="btn btn-dark btn-md mx-auto rounded-pill portfolio-modal-dismiss" role="button" target="_blank"><i class="fa fa-quote-left" aria-hidden="true"></i> JavaScript: Don't judge me by my bad parts, learn the good stuff and stick with that!     
+                &nbsp;<i class="fa fa-quote-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--3rd Modal-->
+            <div class="modal text-center" role="dialog" tabindex="-1" id="portfolio-modal-3">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                        <div class="modal-body">
+                            <div class="article-clean">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+                                            <div class="intro">
+                                            </div>
+                                            <div class="text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer pb-5">
+                            <a class="btn btn-dark btn-md mx-auto rounded-pill portfolio-modal-dismiss" role="button" target="_blank"><i class="fa fa-quote-left" aria-hidden="true"></i> JavaScript is the only language that I'm aware of that people feel they don't need to learn before they start using it.
+                &nbsp;<i class="fa fa-quote-right" aria-hidden="true"></i>    
+
+               
+                
+            </a></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Javascript Files & CDN -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+            <script src="assets/js/clean-blog.js?h=5c5da44b414001c67a91a5784fe4f011"></script>
+            <script src="assets/blog-collection.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+            <script src="assets/js/theme.js"></script>
+</body>
+
+</html>
